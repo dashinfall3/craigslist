@@ -26,9 +26,10 @@ post '/post/:id' do
   #update attributes from params
   post = Post.where("secret_key = ?", params[:secret_key]).first
   puts post.inspect
-  post.update_attributes(:title => params[:title], :category_id => params[:category_id], :body => params[:body], :location => params[:location], :price => params[:price], :contact_name => params[:contact_name])
+  post.update_attributes(:title => params[:title], :category_id => params[:category_id], :body => params[:body], :location => params[:location], :email => params[:email], :price => params[:price], :contact_name => params[:contact_name])
+  content_type :json
   @post = post
-  erb :post
+  @post.to_json
 end
 
 # Sinatra's get, post, put, etc. URL helpers match against the shape/form of a URL.

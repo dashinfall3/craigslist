@@ -3,10 +3,10 @@
       Title: <%= @post.title %>
     </div>
     <div class ="post_info">
-      <span class="info_item">Location: <%= @post.location %></span>
-      <span class="info_item">Price: <%= @post.price %></span>
-      <span class="info_item">Contact: <%= @post.contact_name %></span>
-      <span class="info_item">Email: <%= @post.email %></span>
+      <span class="info_item"> Location: <span id="location"><%= @post.location %></span></span>
+      <span class="info_item"> Price:<span id="price"> <%= @post.price %></span></span>
+      <span class="info_item"> Contact: <span id="contact"><%= @post.contact_name %></span></span>
+      <span class="info_item"> Email: <span id="email"><%= @post.email %></span></span>
     </div>
     <div class ="post_body">
       Body: <%= @post.body %>
@@ -19,7 +19,7 @@
 <div style="padding:15px">
 <h3>Edit your Post</h3>
 <div class="post_form"> 
-  <form action="/post/<%=@post.id%>" method="post">
+  <form id="edit_post" action="/post/<%=@post.id%>" method="post">
     <div class="field"><input type="text" name="title" value="<%=@post.title%>" class="input_field"></div>
     <div class="field"><input type="text" name="location" value="<%=@post.location%>" class="input_field"></div>
     <div class="field"><input type="text" name="body" value="<%=@post.body%>" class="input_field"></div>
@@ -27,7 +27,7 @@
     <div class="field"><input type="text" name="email" value="<%=@post.email%>" class="input_field"></div>
     <div class="field"><input type="text" name="contact_name" value="<%=@post.contact_name%>" class="input_field"></div>
     <div class="field"><input type="integer" name="category_id" value="category_id" class="input_field"></div>
-    <div class="filed"><input type="hidden" name="secret_key" value="<%=@post.secret_key%>"></div>
+    <div class="field"><input type="hidden" id="secret_key" name="secret_key" value="<%=@post.secret_key%>"></div>
     <input type="submit" value="Post">
   </form>
 </div>
