@@ -17,13 +17,12 @@ post '/post' do
   redirect '/'
 end
 
-get '/edit/:key' do
-  @post = Post.where("secret_key = ?", params[:key]).first
-  # Client.where("orders_count = ?", params[:orders])
+get '/post/:id/edit' do
+  @post = Post.where("secret_key = ?", params[:id]).first
   erb :post
 end
 
-post '/edit' do
+post '/post/:id' do
   #update attributes from params
   post = Post.where("secret_key = ?", params[:secret_key]).first
   puts post.inspect

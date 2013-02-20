@@ -1,0 +1,71 @@
+.category_name {
+  line-height: 36px;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+header {
+  background: black;
+  height: 50px;
+  width: 100%;
+  color:white;
+
+}
+
+.title {
+  color:white;
+  font-weight: 600;
+  padding:10px;
+  font-size:24px;
+}
+
+
+.container {
+  padding:10px;
+}
+
+.post_form {
+  margin: 30px 0 0 0;
+}
+
+.input_field {
+  color: #838383;
+  width: 300px;
+  font-size: 18px;
+  padding: 8px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #dddddd;
+}
+
+.field {
+  margin: 5px 0 0 0;
+}
+
+.post_title {
+  color: green;
+}
+
+.post_body {
+  font-size: 14px;
+  margin: 5px 0 0 0;
+
+}
+
+.post_info {
+  font-size: 12px;
+  color: #838383;
+  margin: 2px 0 0 0;
+}
+.info_item {
+  margin: 0 10px 0 0;
+}
+
+.title a {
+  color: white;
+}

@@ -1,22 +1,16 @@
 <% @posts.each do |post| %>
   <div class='post' style="margin: 50px 0 0 10px">
-    <div>
+    <div class="post_title">
       Title: <%= post.title %>
     </div>
-    <div>
-      Location: <%= post.location %>
+    <div class ="post_info">
+      <span class="info_item">Location: <%= post.location %></span>
+      <span class="info_item">Price: <%= post.price %></span>
+      <span class="info_item">Contact: <%= post.contact_name %></span>
+      <span class="info_item">Email: <%= post.email %></span>
     </div>
-    <div>
+    <div class ="post_body">
       Body: <%= post.body %>
-    </div>
-    <div>
-      Price: <%= post.price %>
-    </div>
-    <div>
-      Email: <%= post.email %>
-    </div>
-    <div>
-      Secret Key: <%= post.secret_key %>
     </div>
   </div>
 
